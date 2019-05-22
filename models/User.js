@@ -7,7 +7,7 @@ var userSchema=new Schema({
     type:{type:String},
     opt:{type:String},
     email:{type:String},
-    devices:{type:String},
+    devices:[{type:String}],
     created_at:{type:Date},
     updated_at:{type:Date},
     last_logged_in:{type:Date},
