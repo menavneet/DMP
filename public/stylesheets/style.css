@@ -1,8 +1,35 @@
+*{
+  color: #444
+}
 body {
+  background-color: #20B7FF;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+label{
+  margin: 5px;
+  padding: 5px;
+  display: block;
+}
+input{
+  margin:5px;
+  padding: 5px;
+  width: 100%
+}
+button{
+  border-radius:3px; 
+  border: 0;
+  background: whitesmoke;
+  color:#222;
+  padding: 7px;
+  margin: 5px;
+  align-self: flex-end
+}
+.main-panel{
+  margin: auto;
+  width: 50%
 }
