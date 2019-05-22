@@ -1,9 +1,11 @@
 {% extends "../layout.njk" %}
 {% block body %}
-    <from>
-    <label>Name:</label>
-    <input type="text" name="name">
-    <label>Description</label>
-    <textarea name="description"></textarea>
-    </from>
+    <form method="post">
+    <label>Name :</label>
+    <input type="text" name="name" placeholder="Enter Name of Application">
+    <label>Description :</label>
+    <textarea name="description" placeholder="Enter Description of Application"></textarea>
+    {# <button type="submit" value="Submit">Submit</button> #}
+    <button type="submit"> Add Application</button>
+    </form>
 {% endblock %}
