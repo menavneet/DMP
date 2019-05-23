@@ -1,5 +1,26 @@
 {% extends "../layout.njk" %}
 {% block body %}
-    <h1>Department Name</h1>
-    
+    <h1>{{name}}</h1>
+     <table style="width:100%" border="0">
+  <tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Created At</th>
+    <th>Created By</th>
+    <th>DeadLine</th>
+  </tr>
+{% set colorClass = cycler("white", "lightblue") %}
+  {% for application in applications %}
+  <tr class={{colorClass.next()}}>
+    <td>{{application._id}}</td>
+    <td>{{application.name}}</td>
+    <td>{{application.description}}</td>
+    <td>{{application.created_at}}</td>
+    <td>{{application.created_by}}</td>
+    <td>{{application.last_date_to_response}}</td>
+    <td><a href="/department/application?id={{application._id}}" >detail</a></td>      
+  </tr>
+  {% endfor %}
+</table> 
 {% endblock %}

@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #333;
 }
 label{
   margin: 5px;
@@ -33,7 +33,22 @@ button,.button{
   margin: 5px;
   align-self: flex-end
 }
+td{
+  padding: 5px;
+  margin: 0;
+  border: 0;
+}
+
+table{
+  border: 0;
+}
 .main-panel{
   margin: auto;
-  width: 50%
+  width: 80%
+}
+.white{
+  background: white
+}
+.lightblue{
+  background: #d0d0ff
 }
