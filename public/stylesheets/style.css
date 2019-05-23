@@ -16,7 +16,7 @@ label{
   font-weight: 600; 
   display: block;
 }
-input,textarea{
+input,textarea,select{
   margin:5px;
   padding: 5px;
   width: 100%;
