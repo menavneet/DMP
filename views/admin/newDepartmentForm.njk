@@ -1,0 +1,21 @@
+{% extends "../layout.njk" %}
+{% block body %}
+    <h1>Add New Department</h1>
+    <form method="post">
+    <label>Name :</label>
+    <input type="text" name="name" placeholder="Enter Name of Department">
+    <label>Phone Number :</label>
+    <input type="text" name="number" placeholder="Enter Phone Number of Department">
+    <label>Type :</label>
+    <select name="user_type">
+    <option>Super Admin</option>
+    <option>Admin</option>
+    <option>Department</option>
+    </select>
+    <label>E-mail :</label>
+    <input type="email" name="email" placeholder="Enter E-mail ID of Department">
+    
+    {# <button type="submit" value="Submit">Submit</button> #}
+    <button type="submit"> Add Department</button>
+    </form>
+{% endblock %}

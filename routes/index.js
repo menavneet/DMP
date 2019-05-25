@@ -7,7 +7,6 @@ router.get('/', function(req, res, next) {
 });
 
 
- this  is new text
 router.get('/department',(req,res,next)=>{
 
   dummyData=[
@@ -33,5 +32,8 @@ router.get('/admin',(req,res,next)=>{
 router.get('/admin/newApplication',(req,res,next)=>{
   res.render('./admin/newApplicationForm');
 })
+router.get('/admin/newDepartmentForm',(req,res,next)=>{
+  res.render('./admin/newDepartmentForm');
+});
 
 module.exports = router;
