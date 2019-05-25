@@ -45,6 +45,9 @@ router.get('/admin',(req,res,next)=>{
 router.get('/admin/newApplication',(req,res,next)=>{
   res.render('./admin/newApplicationForm');
 })
+router.get('/admin/newDepartmentForm',(req,res,next)=>{
+  res.render('./admin/newDepartmentForm');
+});
 
 router.get('/superadmin/newUser',(req,res,next)=>{
   res.render('./superadmin/newUser')
