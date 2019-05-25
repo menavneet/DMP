@@ -2,11 +2,11 @@ var Schema=require('mongoose').Schema
 var db=require('../config/db')
 
 var userSchema=new Schema({
-    name:{type:String},
-    phone:{type:String},
-    type:{type:String},
+    name:{type:String}, //
+    phone:{type:String}, //
+    type:{type:String}, // drop down
     opt:{type:String},
-    email:{type:String},
+    email:{type:String}, //
     devices:[{type:String}],
     created_at:{type:Date},
     updated_at:{type:Date},

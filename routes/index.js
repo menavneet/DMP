@@ -2,6 +2,15 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
+
+
+// '/'
+// '/department' index
+// '/department/application'
+// '/admin' index 
+// '/admin/newApplication'
+// '/admin/newDepartment      User mean Department
+
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
@@ -18,10 +27,14 @@ router.get('/department',(req,res,next)=>{
   res.render('./department/index',{applications:dummyData,name:'Department Name'})
 });
 
+router.post('/department',(req,res,next)=>{
+  const name=req.body.name;
+  const description=req.body.description;
+});
+
 router.get('/department/application',(req,res,next)=>{
-  var application={}
-  application._id=req.query.id
-  console.log('-------')
+  var application={}            //Dummy
+  application._id=req.query.id  //Dummy
   res.render('./department/application',{application:application})
 })
 
@@ -31,6 +44,10 @@ router.get('/admin',(req,res,next)=>{
 
 router.get('/admin/newApplication',(req,res,next)=>{
   res.render('./admin/newApplicationForm');
+})
+
+router.get('/superadmin/newUser',(req,res,next)=>{
+  res.render('./superadmin/newUser')
 })
 
 module.exports = router;
