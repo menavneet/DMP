@@ -4,11 +4,9 @@
     <form method="post">
     <label>Department</label>
     <select name="department_id">
-    <option> Department 1</option>
-    <option> Department 2</option>
-    <option> Department 3</option>
-    <option> Department 4</option>
-    <option> Department 5</option>
+    {% for department in departments %}
+    <option value={{department._id}}> {{department.name}}</option>
+    {% endfor %}
     </select>
     <label>Name :</label>
     <input type="text" name="name" placeholder="Enter Name of Application">

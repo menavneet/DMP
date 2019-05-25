@@ -11,11 +11,5 @@
 <label>Current Status : {{application.current}}</label>    
 </div>
 <div>
-<form method="post" action="/department/addFollowUpDetail">
-<label>Follow up Details :</label>
-    <textarea name="follow_up_detail" placeholder="Update Follow Up Details of Application"></textarea>
-    <input type="hidden" name="application_id" value={{application._id}}>
-    <input type="submit" value="Add follow up detail">
-</form>
 </div>
 {% endblock %}
