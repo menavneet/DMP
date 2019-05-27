@@ -7,6 +7,7 @@ var lib=require('../utils/util');
 module.exports = {
     indexPage:async (req, res, next) => {
         const applications= await ApplicationData.getAllApplication()
+        console.log(applications)
         res.render('./admin/index', { applications: applications });
     },
     showApplicationById:async (req, res, next) => {
