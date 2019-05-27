@@ -49,6 +49,22 @@ table{
 .white{
   background: white
 }
+
 .lightblue{
   background: #d0d0ff
+}
+
+.follow-up-tile{
+  background: white;
+  border-radius:5px;
+  padding: 3px;
+  margin: 2px; 
+}
+.follow-up-tile:hover{
+  background: #e0e0e0;
+}
+.application-detail{
+  background: white;
+  padding: 7px;
+  border-radius: 3px;
 }

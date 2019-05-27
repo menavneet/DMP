@@ -1,15 +1,19 @@
 {% extends "../layout.njk" %}
 {% block body %}
-<div class="white">
+<div class="application-detail">
 <h1>Application ID {{application._id}}</h1>
 <label>Name :{{application.name}}</label>
 <label>Description :{{application.description}}</label>
 <label>Created At : {{application.created_at}}</label>
 <label>Created By :{{application.created_by}}</label>
-<label>Follow Up Detail :</label>
 <label>DeadLine :{{application.late_date_to_response}}</label>
 <label>Current Status : {{application.current}}</label>    
 </div>
+<label>Follow Up Detail :
+</label>
+{% for item in application.follow_up_detail %}
+   <div class="follow-up-tile">{{item}}</div>
+{% endfor %}
 <div>
 <form method="post" action="/department/addFollowUpDetail">
 <label>Follow up Details :</label>
