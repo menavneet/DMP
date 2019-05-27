@@ -1,7 +1,8 @@
 module.exports={
     validate:(req,res,next)=>{
-        console.log('-------')
-        console.log(req.session)
+        // if(req.session.department==undefined || req.session.department.user_type !='department')
+        // {res.redirect('/') }
+        // else
         next();
     }
 }

@@ -1,7 +1,8 @@
 module.exports={
     vaildate:(req,res,next)=>{
-        console.log('---------')
-        console.log(req.session)
-        next();
+        // if(req.session.department==undefined || req.session.department.user_type !='admin')
+        // {res.redirect('/') }
+        // else
+        next(); 
     }
 }
