@@ -1,7 +1,6 @@
 var ApplicationData = require('../data/applicationData')
 module.exports = {
   indexPage: async (req, res, next) => {
-    console.log(req.session.department)
     const applications = await ApplicationData.getAllApplication({ department_id: req.session.department._id })
     res.render('./department/index', { applications: applications, name: 'Department Name' })
   },
@@ -16,8 +15,10 @@ module.exports = {
     const detail = req.body.detail
     const status = req.body.status
     const deadline = req.body.deadline
+    console.log(req.body)
     if (id && detail && status && deadline) {
-      const update = { $push: { 'detail': detail, 'status': status, 'deadline': deadline } };
+      console.log('updated')
+      const update = { $push: {follow_up_detail:{ 'detail': detail, 'status': status, 'deadline': deadline }} };
       await ApplicationData.addFollowUpDetail(id, update);
     }
     res.redirect('/department')

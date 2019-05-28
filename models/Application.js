@@ -10,7 +10,7 @@ var applicationSchema = new Schema({
         status:{type:String},
         deadline:{type:Date}
     }],
-    late_date_to_response:{type:Date},
+    late_date_to_response:{type:Date,default:Date.now()+36000},
     current_status:{type:String}, 
     case_close:{type:Boolean,default:false},// closing discription
 })

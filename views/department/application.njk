@@ -18,7 +18,7 @@
     <label>Follow Up Detail :
 </label>
     {% for item in application.follow_up_detail %}
-        <div class="follow-up-tile">{{item}}</div>
+        <div class="follow-up-tile">{{item.detail}}</div>
     {% endfor %}
     <div>
         <form method="post" action="/department/addFollowUpDetail">
@@ -36,7 +36,7 @@
                 <label>Dead Line</label>
                 <input name="deadline" type="Date">
                 <label>Detail</label>
-                <textarea name="follow_up_detail" placeholder="Update Follow Up Details of Application"></textarea>
+                <textarea name="detail" placeholder="Update Follow Up Details of Application"></textarea>
                 <input type="hidden" name="application_id" value={{application._id}}>
                 <input type="submit" value="Add follow up detail">
             </div>

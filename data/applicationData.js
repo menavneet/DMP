@@ -9,8 +9,8 @@ module.exports={
         return application;
     },
     addNewApplication:async (application)=>{
-        new Application(application).save();
-        return 'saved'
+        return await new Application(application).save();
+      
     },
     addFollowUpDetail:async (id,data)=>{
         const application=await Application.findByIdAndUpdate(id,data);

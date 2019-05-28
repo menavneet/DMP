@@ -20,7 +20,7 @@ module.exports = {
         const name = req.body.name;
         const description = req.body.description;
         const department_id = req.body.department_id;
-        const created_by = req.session.department.name;
+        const created_by = (req.session && req.department && req.session.department.name) || 'Admin';
         if (name && description && department_id && created_by) {
             const application = {
                 'name': name,
@@ -28,7 +28,8 @@ module.exports = {
                 'department_id': department_id,
                 'created_by': created_by
             };
-            await ApplicationData.addNewApplication(application)
+        const result  = await ApplicationData.addNewApplication(application)
+        console.log(result)
         }
         res.redirect('/admin')
     },
@@ -44,7 +45,7 @@ module.exports = {
         const user_name = lib.getUserName(req.body.phone)
         if (name && phone && user_type && email && user_name) {
             const data = {
-                'name':name,
+                'name': name,
                 'phone': phone,
                 'user_type': user_type,
                 'email': email,
