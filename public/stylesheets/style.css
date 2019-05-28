@@ -59,6 +59,7 @@ table{
   border-radius:5px;
   padding: 3px;
   margin: 2px; 
+  padding-left:10px ;
 }
 .follow-up-tile:hover{
   background: #e0e0e0;

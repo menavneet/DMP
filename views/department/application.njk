@@ -1,25 +1,45 @@
 {% extends "../layout.njk" %}
 {% block body %}
-<div class="application-detail">
-<h1>Application ID {{application._id}}</h1>
-<label>Name :{{application.name}}</label>
-<label>Description :{{application.description}}</label>
-<label>Created At : {{application.created_at}}</label>
-<label>Created By :{{application.created_by}}</label>
-<label>DeadLine :{{application.late_date_to_response}}</label>
-<label>Current Status : {{application.current}}</label>    
-</div>
-<label>Follow Up Detail :
+    <div class="application-detail">
+        <h1>Application ID          {{application._id}}</h1>
+        <label>Name :           <em>{{application.name}}</em>
+        </label>
+        <label>Description :    <em>{{application.description}}</em>
+        </label>
+        <label>Created At :     <em>{{application.created_at}}</em>
+        </label>
+        <label>Created By :     <em>{{application.created_by}}</em>
+        </label>
+        <label>DeadLine :       <em>{{application.late_date_to_response}}</em>
+        </label>
+        <label>Current Status : <em>{{application.current}}</em>
+        </label>
+    </div>
+    <label>Follow Up Detail :
 </label>
-{% for item in application.follow_up_detail %}
-   <div class="follow-up-tile">{{item}}</div>
-{% endfor %}
-<div>
-<form method="post" action="/department/addFollowUpDetail">
-<label>Follow up Details :</label>
-    <textarea name="follow_up_detail" placeholder="Update Follow Up Details of Application"></textarea>
-    <input type="hidden" name="application_id" value={{application._id}}>
-    <input type="submit" value="Add follow up detail">
-</form>
-</div>
+    {% for item in application.follow_up_detail %}
+        <div class="follow-up-tile">{{item}}</div>
+    {% endfor %}
+    <div>
+        <form method="post" action="/department/addFollowUpDetail">
+            <label>Add Follow up Details :</label>
+            <div>
+                <label>Status</label>
+                <select name="status">
+                    <option value="status1">Status 1 </option>
+                    <option value="status2">Status 2 </option>
+                    <option value="status3">Status 3 </option>
+                    <option value="status4">Status 4 </option>
+                    <option value="status5">Status 5 </option>
+                    <option value="status6">Status 6 </option>
+                </select>
+                <label>Dead Line</label>
+                <input name="deadline" type="Date">
+                <label>Detail</label>
+                <textarea name="follow_up_detail" placeholder="Update Follow Up Details of Application"></textarea>
+                <input type="hidden" name="application_id" value={{application._id}}>
+                <input type="submit" value="Add follow up detail">
+            </div>
+        </form>
+    </div>
 {% endblock %}

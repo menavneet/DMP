@@ -3,6 +3,6 @@ module.exports={
         // if(req.session.department==undefined || req.session.department.user_type !='department')
         // {res.redirect('/') }
         // else
-        next();
+        {next();}
     }
 }
