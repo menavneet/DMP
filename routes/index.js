@@ -18,9 +18,10 @@ router.post('/department/addFollowUpDetail', departmentMiddleware.validate, Depa
 
 router.get('/admin', adminMiddleware.vaildate, AdminController.indexPage);
 router.get('/admin/application', adminMiddleware.vaildate, AdminController.showApplicationById);
-router.post('/admin/newApplication', adminMiddleware.vaildate, AdminController.saveNewApplicationFrom)
 router.get('/admin/newApplication', adminMiddleware.vaildate, AdminController.newApplicationForm);
 router.get('/admin/newDepartmentForm', adminMiddleware.vaildate, AdminController.newDepartmentForm);
+
+router.post('/admin/newApplication', adminMiddleware.vaildate, AdminController.saveNewApplicationFrom)
 router.post('/admin/newDepartmentForm', adminMiddleware.vaildate, AdminController.saveNewDepartmentForm);
 
 module.exports = router;

@@ -10,7 +10,6 @@ module.exports={
     },
     addNewApplication:async (application)=>{
         return await new Application(application).save();
-      
     },
     addFollowUpDetail:async (id,data)=>{
         const application=await Application.findByIdAndUpdate(id,data);

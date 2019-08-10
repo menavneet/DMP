@@ -1,6 +1,5 @@
 
 var lib ={
-    
  password_hash:(password)=>{
     var crypto = require('crypto');
     var  hash = crypto.createHash('sha256').update(password).digest('base64');
